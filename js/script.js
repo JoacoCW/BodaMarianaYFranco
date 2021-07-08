@@ -17,5 +17,5 @@ for (let i = 1; i <= cantidadDeInvitados; i++){
         else {
             alert(nombre+' eligió menú regular');
             }
-        }
     }
+}

@@ -19,10 +19,10 @@ function getInfoInvitados(number){
                     alert(nombre+' eligió menú regular');
                 }
             }
+            document.getElementById("resultados").innerHTML=`<h4>El nvitado</h4><h6>${nombre}</h6><p>Eligió el menú</p><p>${menu}</P>`;
+            //Aparece solo el último, resolver.
         }
         getMenu(nombre);
-        /*document.getElementById("resultados").innerHTML="<h4>El nvitado</h4><h6>nombre</h6><p>Eligió el menú</p><p>MENÚ</P>";*/
-        //Lo dejo comentado hasta que sepa como resolverlo.
     }
 }
 

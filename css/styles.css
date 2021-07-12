@@ -11280,3 +11280,9 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+@media (max-width: 769px) {
+  .mapa {
+    width: 320px;
+  }
+}

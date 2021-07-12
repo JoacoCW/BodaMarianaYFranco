@@ -14,7 +14,7 @@ function getInfoInvitados(number){
                     } else {
                         alert(nombre+' eligió menú regular');
                     }
-                    document.getElementById("resultados").innerHTML+=`<h4>El nvitado</h4><h6>${nombre}</h6><p>Eligió el menú</p><p>${menu}</P>`;
+                    document.getElementById("resultados").innerHTML+=`<h4>${nombre} eligió el menú</h4><p>${menu}</P>`;
                 } else {
                     alert(nombre+' se va a quedar sin comer por boludo. Ingrese V para menú vegetariano o R para menú regular');
                 }

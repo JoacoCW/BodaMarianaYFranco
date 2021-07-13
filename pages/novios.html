@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Mariana & Franco</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Mariana & Franco</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Información</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Invitados.html">Invitados</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Novios.html">Novios</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Mariana<br> & <br>Franco</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Nos casamos.</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Agregar invitados-->
+        <section class= "agregarInvitados-section text-center">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Agregar invitados</h2>
+                        <div>
+                            <input class="inputInvitado" type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        </div>
+                        <div>
+                            <input class="inputInvitado" type="text" id="apellido" name="apellido" placeholder="Apellido">
+                        </div>
+                        <div>
+                            <button class="inputInvitado" id="Add" onclick="agregarInvitado()"><i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="resultados"></div>
+        <!-- <script src="../js/scriptObjeto.js"></script> -->
+        <!-- Footer-->
+        <footer class="footerNovios bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; <a href="https://github.com/JoacoCW">Joaquín Weiss</a> 2021</div></footer>
+        <script src="../js/scriptObjeto.js"></script>
+    </body>
+    </html>

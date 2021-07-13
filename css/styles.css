@@ -11190,6 +11190,16 @@ body {
   margin-bottom: 5rem;
 }
 
+.agregarInvitados-section {
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 1) 100%);
+  z-index: 1000;
+}
+
+.inputInvitado {
+  margin-bottom: 1rem;
+  border-radius: 15px 15px 15px 15px;
+}
+
 .projects-section {
   padding: 10rem 0;
 }
@@ -11279,6 +11289,12 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+.footerNovios {
+  bottom: 0%;
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 1) 100%);
 }
 
 @media (max-width: 769px) {

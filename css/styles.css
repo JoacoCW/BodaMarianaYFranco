@@ -11200,6 +11200,10 @@ body {
   border-radius: 15px 15px 15px 15px;
 }
 
+.inputConfirmarInvitado {
+  width: 400px;
+}
+
 .projects-section {
   padding: 10rem 0;
 }

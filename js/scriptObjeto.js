@@ -1,3 +1,5 @@
+// Clave para ingresar a la sección de novios
+
 let clave = prompt("Ingrese la clave 1234");
 
 function ingresar(clave){
@@ -11,6 +13,8 @@ function ingresar(clave){
 }
 
 ingresar(clave);
+
+// Objeto invidato
 
 class Invitado{
     constructor (nombre, apellido, documento, dire, menu, confirma) {
@@ -28,6 +32,8 @@ class Invitado{
         document.getElementById("resultados").innerHTML+=`<h4>Se agregó a ${this.nombre} ${this.apellido} a lista de invitados</h4>`;
     }
 }
+
+// Array de invitados. Más adelante quiero que sea un JSON al que se pueda acceder desde los diferentes scripts
 
 const invitados = [
     {nombre : "Franco", apellido : "Silva", documento : "39999999", dire : "Calle tal 546", menu : "Clasico", confirma : "si"},
@@ -51,6 +57,8 @@ console.log(invitado1);
 invitado1.comer();
 
 // acá debería ir un for que cicle por todo el JSON para saber cuantos elementos contiene y devuelva una variable N + 1 para ser el número del nuevo invitado
+
+// Función que agrega un invitado a la lista con los datos que toma por input
 
 function agregarInvitado(){
     const invitadoN = new Invitado (document.getElementById("nombre").value, document.getElementById("apellido").value);

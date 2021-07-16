@@ -28,6 +28,8 @@ function getInfoInvitados(number){
 getInfoInvitados(cantidadDeInvitados);
 */
 
+// Objeto invitado
+
 class Invitado{
     constructor (nombre, apellido, documento, dire, menu, confirma) {
         this.nombre = nombre;
@@ -45,6 +47,8 @@ class Invitado{
     }
 }
 
+//Array de invitados, la idea es más adelante pasarlo a un JSON y completar toda la lista de invitados
+
 const invitados = [
     {nombre : "Franco", apellido : "Silva", documento : "39999999", dire : "Calle tal 546", menu : "Clasico", confirma : "si"},
     {nombre : "Mariana", apellido : "Torreblanca", documento : "38999999", dire : "Calle tal 546", menu : "Clasico", confirma : "si"},
@@ -61,6 +65,7 @@ const invitados = [
     {nombre : "Joaquín", apellido : "Weiss", documento : "37608601", dire : "Juramento 3675", menu : "Clasico", confirma : "si"}
 ];
 
+//Función que recorre la lista comparando con el nombre ingresado por input para saber si está en la lista de invitados
 
 function checkInvitado(){
     const nombreIngresado = document.getElementById("nombre").value;

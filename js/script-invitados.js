@@ -1,32 +1,3 @@
-/*
-let cantidadDeInvitados = prompt('Ingrese la cantidad de invitados que quiere confirmar');
-
-function getInfoInvitados(number){
-    console.log(number);
-    for (let i = 1; i <= number; i++){
-        let nombre = prompt('Ingrese nombre completo del '+i+'° invitado');
-        let menu = '';
-        function getMenu(nombre){
-            do {
-                menu = prompt('Eliga menu vegetariano o regular, ingrese V o R según correspoda');
-                if(menu == 'V' || menu == 'R'){
-                    if (menu == 'V') {
-                        alert(nombre+' eligió menú vegetariano');
-                    } else {
-                        alert(nombre+' eligió menú regular');
-                    }
-                    document.getElementById("resultados").innerHTML+=`<h4>${nombre} eligió el menú</h4><p>${menu}</P>`;
-                } else {
-                    alert(nombre+' se va a quedar sin comer por boludo. Ingrese V para menú vegetariano o R para menú regular');
-                }
-            } while (menu != "V" && menu != "R")
-        }
-        getMenu(nombre);
-    }
-}
-
-getInfoInvitados(cantidadDeInvitados);
-*/
 
 // Objeto invitado
 

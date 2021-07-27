@@ -56,7 +56,19 @@ console.log(invitado1);
 
 invitado1.comer();
 
-// acá debería ir un for que cicle por todo el JSON para saber cuantos elementos contiene y devuelva una variable N + 1 para ser el número del nuevo invitado
+// Generar interfaz de lista de invitados
+
+for ( const invitado of invitados) {
+    let tr = document.createElement("tr");
+    tr.innerHTML = `<td>${invitado.nombre}</td>
+                    <td>${invitado.apellido}</td>
+                    <td>${invitado.documento}</td>
+                    <td>${invitado.dire}</td>
+                    <td>${invitado.menu}</td>
+                    <td>${invitado.confirma}</td>
+                    <td><button id="btnEditar"><i class="far fa-edit"></i></button></td>`;
+    document.getElementById('lista').appendChild(tr);
+}
 
 // Función que agrega un invitado a la lista con los datos que toma por input
 
@@ -65,6 +77,15 @@ function agregarInvitado(){
     invitados.push(invitadoN);  //Incluído para desafío clase de Arrays
     console.log(invitados);
     invitadoN.mostrarInvitado();
+    let tr = document.createElement("tr");
+    tr.innerHTML = `<td>${invitadoN.nombre}</td>
+                    <td>${invitadoN.apellido}</td>
+                    <td>${invitadoN.documento}</td>
+                    <td>${invitadoN.dire}</td>
+                    <td>${invitadoN.menu}</td>
+                    <td>${invitadoN.confirma}</td>
+                    <td><button id="btnEditar"><i class="far fa-edit"></i></button></td>`;
+    document.getElementById('lista').appendChild(tr);
 }
 
 const addInvitado = document.getElementById('addInvitado');

@@ -66,3 +66,10 @@ function agregarInvitado(){
     console.log(invitados);
     invitadoN.mostrarInvitado();
 }
+
+const addInvitado = document.getElementById('addInvitado');
+console.dir(addInvitado);//Para ver la salida en consola
+
+// Determinar elemento a escuchar
+
+addInvitado.addEventListener("click", agregarInvitado);

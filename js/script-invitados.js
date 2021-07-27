@@ -82,3 +82,10 @@ function checkInvitado(){
         alert(invitadoFiltrado.nombre + " " + invitadoFiltrado.apellido + " está invitado a la boda de Mariana y Franco");
     }
 }
+
+const addInvitado = document.getElementById('checkInvitado');
+console.dir(addInvitado);//Para ver la salida en consola
+
+// Determinar elemento a escuchar
+
+addInvitado.addEventListener("click", checkInvitado);

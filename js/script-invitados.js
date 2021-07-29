@@ -1,24 +1,4 @@
-
-// Objeto invitado
-
-class Invitado{
-    constructor (nombre, apellido, documento, dire, menu, confirma) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.documento = 0;
-        this.dire = '';
-        this.menu = '';
-        this.confirma = '';
-    }
-    comer(){
-        console.log(this.nombre + ' ' + this.apellido + ' comerá el menú ' + this.menu);
-    }
-    mostrarInvitado(){
-        document.getElementById("resultados").innerHTML+=`<h4>Se agregó a ${this.nombre} ${this.apellido} a lista de invitados</h4>`;
-    }
-}
-
-//Array de invitados, la idea es más adelante pasarlo a un JSON y completar toda la lista de invitados
+//Array de invitados, la idea es más adelante pasarlo a un JSON externo y completar toda la lista de invitados
 
 const invitados = [
     {nombre : "Franco", apellido : "Silva", documento : "39999999", dire : "Calle tal 546", menu : "Clasico", confirma : "si"},
@@ -36,23 +16,7 @@ const invitados = [
     {nombre : "Joaquín", apellido : "Weiss", documento : "37608601", dire : "Juramento 3675", menu : "Clasico", confirma : "si"}
 ];
 
-//Función que recorre la lista comparando con el nombre ingresado por input para saber si está en la lista de invitados
 
-function checkInvitado(){
-    const nombreIngresado = document.getElementById("nombre").value;
-    const filtro = invitados.filter(elemento => nombreIngresado.includes(elemento.nombre) && nombreIngresado.includes(elemento.apellido));
-    console.log(filtro);
-    console.log(nombreIngresado);
-    if(filtro != ""){
-        console.log("Filtro no está vacío");
-    }
-    else {
-        console.log("Filtro está vacío por que esa persona no está invitada");
-    }
-    for (const invitadoFiltrado of filtro) {
-        alert(invitadoFiltrado.nombre + " " + invitadoFiltrado.apellido + " está invitado a la boda de Mariana y Franco");
-    }
-}
 
 const addInvitado = document.getElementById('checkInvitado');
 console.dir(addInvitado);//Para ver la salida en consola

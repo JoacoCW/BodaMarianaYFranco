@@ -14,25 +14,6 @@ function ingresar(clave){
 
 ingresar(clave);
 
-// Objeto invidato
-
-class Invitado{
-    constructor (nombre, apellido, documento, dire, menu, confirma) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.documento = 0;
-        this.dire = '';
-        this.menu = '';
-        this.confirma = '';
-    }
-    comer(){
-        console.log(this.nombre + ' ' + this.apellido + ' comerá el menú ' + this.menu);
-    }
-    mostrarInvitado(){
-        document.getElementById("resultados").innerHTML+=`<h4>Se agregó a ${this.nombre} ${this.apellido} a lista de invitados</h4>`;
-    }
-}
-
 // Array de invitados. Más adelante quiero que sea un JSON al que se pueda acceder desde los diferentes scripts
 
 const invitados = [
@@ -51,11 +32,6 @@ const invitados = [
     {nombre : "Joaquín", apellido : "Weiss", documento : "37608601", dire : "Juramento 3675", menu : "Clasico", confirma : "si"}
 ];
 
-const invitado1 = new Invitado(document.getElementById("nombre").value, document.getElementById("apellido").value);
-console.log(invitado1);
-
-invitado1.comer();
-
 // Generar interfaz de lista de invitados
 
 for ( const invitado of invitados) {
@@ -70,27 +46,10 @@ for ( const invitado of invitados) {
     document.getElementById('lista').appendChild(tr);
 }
 
-// Función que agrega un invitado a la lista con los datos que toma por input
-
-function agregarInvitado(){
-    const invitadoN = new Invitado (document.getElementById("nombre").value, document.getElementById("apellido").value);
-    invitados.push(invitadoN);  //Incluído para desafío clase de Arrays
-    console.log(invitados);
-    invitadoN.mostrarInvitado();
-    let tr = document.createElement("tr");
-    tr.innerHTML = `<td>${invitadoN.nombre}</td>
-                    <td>${invitadoN.apellido}</td>
-                    <td>${invitadoN.documento}</td>
-                    <td>${invitadoN.dire}</td>
-                    <td>${invitadoN.menu}</td>
-                    <td>${invitadoN.confirma}</td>
-                    <td><button id="btnEditar"><i class="far fa-edit"></i></button></td>`;
-    document.getElementById('lista').appendChild(tr);
-}
-
 const addInvitado = document.getElementById('addInvitado');
 console.dir(addInvitado);//Para ver la salida en consola
 
 // Determinar elemento a escuchar
+
 
 addInvitado.addEventListener("click", agregarInvitado);

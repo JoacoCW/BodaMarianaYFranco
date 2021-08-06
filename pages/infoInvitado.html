@@ -14,45 +14,21 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/stylesIndex.css">
 </head>
 <body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top">Mariana & Franco</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Información</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Invitados.html">Invitados</a></li>
-                    <li class="nav-item"><a class="nav-link" href="novios.html">Novios</a></li>
-                </ul>
-            </div>
+    <div class="foto1">
+        <div class="letrero1">
+            <a href="../index.html"><img class="img-nombres" src="../assets/img/Nombres-02.svg" alt=""></a>
         </div>
-    </nav>
-    <!-- Masthead-->
-    <header class="masthead">
-        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-            <div class="d-flex justify-content-center">
-                <div class="text-center">
-                    <h1 class="mx-auto my-0 text-uppercase">Mariana<br> & <br>Franco</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Nos casamos.</h2>
-                </div>
-            </div>
-        </div>
-    </header>
+    </div>
     <!-- Agregar info invitado -->
-    
-    <form id="regForm" action="">
+    <form class="text-center mensaje3" id="regForm" action="">
 
-        <h1>Confirmar datos:</h1>
+        <h1 class="form-title">Confirmar datos:</h1>
         
         <!-- One "tab" for each step in the form: -->
-        <div class="tab">Nnombre:
+        <div class="tab">Nombre:
             <p><input placeholder="Nombre..." oninput="this.className = ''"></p>
             <p><input placeholder="Apellido..." oninput="this.className = ''"></p>
         </div>
@@ -78,8 +54,8 @@
         
         <div style="overflow:auto;">
             <div style="float:right;">
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
-            <button type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
+            <button class="btn" type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+            <button class="btn" type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
             </div>
         </div>
         
@@ -97,9 +73,15 @@
     <!-- Resultado -->
     <div class="text-white-50 bg-black text-center pb-sm-1" id="resultados"></div>
     <!-- Footer-->
-    <footer class="footerNovios bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; <a href="https://github.com/JoacoCW">Joaquín Weiss</a> 2021</div></footer>
+    <footer class="footerInvitados"><div>Copyright &copy; <a href="https://github.com/JoacoCW">Joaquín Weiss</a> 2021</div></footer>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Mis scripts -->
     <script src="../js/invitado.js"></script>
     <script src="../js/funciones.js"></script>
+    <script src="../js/script-invitados.js"></script>
     <script src="../js/scriptInfoInvitados.js"></script>
+    <!-- Core theme JS-->
+    <script src="../js/scripts.js"></script>
 </body>
 </html>

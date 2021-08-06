@@ -1,19 +1,3 @@
-// Clave para ingresar a la sección de novios
-
-let clave = prompt("Ingrese la clave 1234");
-
-function ingresar(clave){
-    if(clave != "1234"){
-        clave = prompt("La clave no es correcta, ingresela otra vez");
-        ingresar(clave);
-    }
-    else {
-        alert("La clave es correcta");
-    }
-}
-
-ingresar(clave);
-
 // Array de invitados. Más adelante quiero que sea un JSON al que se pueda acceder desde los diferentes scripts
 
 const invitados = [

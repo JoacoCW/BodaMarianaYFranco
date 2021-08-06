@@ -43,6 +43,8 @@ function checkInvitado(){
     }
     else {
         console.log("Filtro está vacío por que esa persona no está invitada");
+        $('#resultadosFiltroInvitados').append(`<h4>El invitado buscado no está en la lista<br>
+                                                revise acentos y mayúsculas y pruebe de nuevo</h4>`);
     }
     for (const invitadoFiltrado of filtro) {
         alert(invitadoFiltrado.nombre + " " + invitadoFiltrado.apellido + " está invitado a la boda de Mariana y Franco");

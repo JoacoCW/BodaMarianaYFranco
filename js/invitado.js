@@ -9,6 +9,7 @@ class Invitado{
         this.dire = '';
         this.menu = '';
         this.confirma = '';
+        this.id = '';
     }
     comer(){
         console.log(this.nombre + ' ' + this.apellido + ' comerá el menú ' + this.menu);

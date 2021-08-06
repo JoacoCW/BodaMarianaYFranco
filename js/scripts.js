@@ -1,11 +1,9 @@
-/*!
-* Start Bootstrap - Grayscale v7.0.2 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
+$(document).ready(function () {
+    console.log('DOM is ready');
+    if("invitado" in localStorage){
+        const invitadoChequeado = JSON.parse(localStorage.getItem("invitado"));
+    };
+});
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -52,3 +50,12 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+window.addEventListener('load', ()=>{
+    console.log('Imagenes cargadas');
+    $('#indicadorCarga').remove();
+});
+
+$('#eliminarInivtado').click(eliminarInvitado);
+
+$('#login').click(logIn);

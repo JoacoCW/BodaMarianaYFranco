@@ -11391,3 +11391,7 @@ input.invalid {
 .step.finish {
   background-color: #04AA6D;
 }
+
+.great-vibes {
+  font-family: 'Great Vibes', cursive !important;
+}

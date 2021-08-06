@@ -12,10 +12,24 @@ function agregarInvitado(){
                     <td>${invitadoN.dire}</td>
                     <td>${invitadoN.menu}</td>
                     <td>${invitadoN.confirma}</td>
-                    <td><button id="btnEditar"><i class="far fa-edit"></i></button></td>`;
+                    <td><button id="btnEditar"><i class="far fa-edit"></i></button></td>
+                    <td><button id="eliminarInvitado"><i class="fas fa-user-slash"></i></button></td>`;
     document.getElementById('lista').appendChild(tr);
     /* document.getElementById('inputInvitado').reset(); */
 }
+
+class User{
+    constructor (username, password) {
+        this.username = username;
+        this.password = password;
+    }
+}
+
+const usuarios = [
+    {username : "FranYMuffa", password : "1234"},
+    {username : "Marco", password : "1234"},
+    {username : "Joaco", password : "1234"}
+];
 
 //Función que recorre la lista comparando con el nombre ingresado por input para saber si está en la lista de invitados
 
@@ -35,5 +49,29 @@ function checkInvitado(){
         console.log(invitadoFiltrado);
         localStorage.setItem("invitado", JSON.stringify(invitadoFiltrado));
         window.location.replace("infoInvitado.html")
+    }
+}
+
+function eliminarInvitado(e){
+    e.preventDefault();
+    console.log(e.target.id);
+    $(this).closest('tr').remove();
+}
+
+const usuarioIngresado = [];
+
+function logIn(e){
+    e.preventDefault();
+    usuarioIngresado.username = document.getElementById("username").value;
+    usuarioIngresado.password = document.getElementById("password").value;
+    const filtroUsuarios = usuarios.filter(elemento => usuarioIngresado.includes(elemento.username) && usuarioIngresado.includes(elemento.password));
+    console.log(filtroUsuarios);
+    console.log(usuarioIngresado);
+    if(filtroUsuarios != ""){
+        console.log("Filtro no está vacío");
+    }
+    else {
+        console.log("Filtro está vacío por que el usuario existe");
+        window.location.replace("novios.html")
     }
 }

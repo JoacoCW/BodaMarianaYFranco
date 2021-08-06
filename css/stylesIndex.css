@@ -11,6 +11,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    opacity: 80%;
 }
 
 .tituloPrincipal {
@@ -20,12 +21,21 @@
     padding-top: 18rem;
     top: 30%;
     text-align: center;
-    color: rgb(146, 133, 118);
+    color: #89847E;
+    display: none;
+}
+
+.img-nombres {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    padding-top: 25rem;
 }
 
 .mensaje1 {
     text-align: center;
-    color: rgb(146, 133, 118);
+    color: #89847E;
     font-family: Baskerville;
     letter-spacing: 4px;
 }
@@ -80,12 +90,19 @@
     margin-bottom: 1%;
 }
 
+.img-nombres-final {
+    margin-top: 3%;
+    width: 25%;
+    margin-bottom: 10%;
+}
+
 .ellos {
     font-family: 'Great Vibes', cursive !important;
     font-size: 250%;
     font-weight: lighter;
     margin-top: 3%;
     margin-bottom: 10%;
+    display: none;
 }
 
 .botones {
@@ -141,17 +158,23 @@
     border-color: #789c8e;
 }
 
+.flores-abajo {
+    margin-top: -300px;
+}
+
 .footer {
     text-align: center;
     color: rgb(146, 133, 118);
     font-family: Baskerville;
-    padding-top: 1%;
+    padding-top: 0%;
     padding-bottom: 2%;
     background: rgb(111,154,143);
     background: linear-gradient(0deg, rgba(111,154,143,1) 0%, rgba(255,255,255,1) 97%);
+    margin-top: -10px;
+    bottom: 0%;
 }
 
 .footer a {
     text-decoration: none;
-    color: rgb(146, 133, 118);
+    color: #89847E;
 }

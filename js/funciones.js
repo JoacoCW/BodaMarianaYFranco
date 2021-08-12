@@ -25,11 +25,6 @@ class User{
     }
 }
 
-const usuarios = [
-    {username : "FranYMuffa", password : "1234"},
-    {username : "Marco", password : "1234"},
-    {username : "Joaco", password : "1234"}
-];
 
 //Función que recorre la lista comparando con el nombre ingresado por input para saber si está en la lista de invitados
 
@@ -60,7 +55,6 @@ function eliminarInvitado(e){
     $(this).closest('tr').remove();
 }
 
-const usuarioIngresado = [];
 
 function logIn(e){
     e.preventDefault();

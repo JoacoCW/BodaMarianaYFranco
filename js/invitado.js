@@ -1,8 +1,7 @@
-
 // Objeto invidato
 
 class Invitado{
-    constructor (nombre, apellido, documento, dire, menu, confirma) {
+    constructor (nombre, apellido, documento, dire, menu, confirma, id) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.documento = 0;

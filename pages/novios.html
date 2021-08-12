@@ -17,55 +17,27 @@
         <link rel="stylesheet" href="../css/styles.css">
     </head>
     <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Mariana & Franco</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Información</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Invitados.html">Invitados</a></li>
-                        <li class="nav-item"><a class="nav-link" href="loginNovios.html">Novios</a></li>
-                    </ul>
-                </div>
+        <div class="foto1">
+            <div class="letrero1">
+                <a href="../index.html"><img class="img-nombres" src="../assets/img/Nombres-02.svg" alt=""></a>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-                <div class="d-flex justify-content-center">
-                    <div class="text-center">
-                        <h1 class="mx-auto my-0 text-uppercase">Mariana<br> & <br>Franco</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Nos casamos.</h2>
-                    </div>
-                </div>
-            </div>
-        </header>
+        </div>
+        
         <!-- Agregar invitados-->
-        <section class= "agregarInvitados-section text-center">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Agregar invitados</h2>
-                        <div>
-                            <input class="inputInvitado" type="text" id="nombre" name="nombre" placeholder="Nombre">
-                        </div>
-                        <div>
-                            <input class="inputInvitado" type="text" id="apellido" name="apellido" placeholder="Apellido">
-                        </div>
-                        <div>
-                            <button class="inputInvitado" id="addInvitado"><i class="fas fa-plus-circle"></i></button>
-                        </div>
-                    </div>
-                </div>
+        <section id="agregarInvitadosSection" class= "mensaje3 text-center">
+            <h1 class="form-title">Agregar invitados</h1>
+            <div>
+                <input class="inputInvitado" type="text" id="nombre" name="nombre" placeholder="Nombre">
+            </div>
+            <div>
+                <input class="inputInvitado" type="text" id="apellido" name="apellido" placeholder="Apellido">
+            </div>
+            <div>
+                <button class="inputInvitado" id="addInvitado"><i class="fas fa-plus-circle"></i></button>
             </div>
         </section>
         <!-- Resultado -->
-        <div class="text-white-50 bg-black text-center pb-sm-1" id="resultados"></div>
+        <div class="text-center mensaje4" id="resultados"></div>
         <!-- Lista -->
         <section class="bg-black">
             <div class="container px-4 px-lg-5 text-black-50">
@@ -82,17 +54,16 @@
                     </tr>
                 </table>
             </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footerNovios bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; <a href="https://github.com/JoacoCW">Joaquín Weiss</a> 2021</div></footer>
+        </section><!-- Footer-->
+        <footer class="footerInvitados"><div>Copyright &copy; <a href="https://github.com/JoacoCW">Joaquín Weiss</a> 2021</div></footer>
         <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Mis scripts -->
+        <script src="../js/globales.js"></script>
         <script src="../js/invitado.js"></script>
         <script src="../js/funciones.js"></script>
-        <script src="../js/scriptObjeto.js"></script>
         <!-- Core theme JS-->
         <script src="../js/scripts.js"></script>
     </body>

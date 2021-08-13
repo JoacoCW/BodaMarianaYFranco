@@ -12,18 +12,8 @@ $(document).ready(function () {
             for (const literal of datos) {
                 invitados.push(new Invitado(literal.nombre, literal.apellido, literal.documento, literal.dire, literal.menu, literal.confirma, literal.id));
             }
-            for ( const invitado of invitados) {
-                let tr = document.createElement("tr");
-                tr.innerHTML = `<td>${invitado.nombre}</td>
-                                <td>${invitado.apellido}</td>
-                                <td>${invitado.documento}</td>
-                                <td>${invitado.dire}</td>
-                                <td>${invitado.menu}</td>
-                                <td>${invitado.confirma}</td>
-                                <td><button id="btnEditar"><i class="far fa-edit"></i></button></td>
-                                <td><button id="eliminarInvitado"><i class="fas fa-user-slash"></i></button></td>`;
-                document.getElementById('lista').appendChild(tr);
-            }
+            invitadosUI(invitados);
+            
         }
         
     });
@@ -46,3 +36,18 @@ $('#login').click(logIn);
 $('#CheckInvitado').click(checkInvitado);
 
 $('#addInvitado').click(agregarInvitado);
+
+
+//DEFINIR EVENTOS SOBRE EL SELECT GENERADO
+$('#filtroConfirmados').click(function () { 
+    console.log('boton filtro confirmados seleccionado');
+    //SOLUCION CON ANIMACIONES
+    $('#lista').fadeOut(600,function(){
+        //EL FILTRO SE REALIZA UNA VEZ OCULTO EL CONTENEDOR
+        const confirmados = invitados.filter(invitado => invitado.confirma === 'si');
+        console.log(confirmados);
+        invitadosUI(confirmados);
+        //MOSTRAR UNA VEZ GENERADOS LOS PRODUCTOS
+        $('#lista').fadeIn();
+    });
+});

@@ -4,11 +4,11 @@ class Invitado{
     constructor (nombre, apellido, documento, dire, menu, confirma, id) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.documento = 0;
-        this.dire = '';
-        this.menu = '';
-        this.confirma = '';
-        this.id = '';
+        this.documento = documento;
+        this.dire = dire;
+        this.menu = menu;
+        this.confirma = confirma;
+        this.id = id;
     }
     comer(){
         console.log(this.nombre + ' ' + this.apellido + ' comerá el menú ' + this.menu);

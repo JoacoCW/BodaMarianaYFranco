@@ -414,3 +414,8 @@ input.invalid {
 #eliminarInvitado:hover {
     color: #535353;
 }
+
+.btn-confirmados {
+    margin-left: 45% !important;
+    margin-bottom: 2%;
+}

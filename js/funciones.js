@@ -1,3 +1,18 @@
+function invitadosUI(parametro){
+    for ( const persona of parametro) {
+        let tr = document.createElement("tr");
+        tr.innerHTML = `<td>${persona.nombre}</td>
+                        <td>${persona.apellido}</td>
+                        <td>${persona.documento}</td>
+                        <td>${persona.dire}</td>
+                        <td>${persona.menu}</td>
+                        <td>${persona.confirma}</td>
+                        <td><button id="btnEditar"><i class="far fa-edit"></i></button></td>
+                        <td><button id="eliminarInvitado"><i class="fas fa-user-slash"></i></button></td>`;
+        document.getElementById('lista').appendChild(tr);
+    }
+}
+
 // Función que agrega un invitado a la lista con los datos que toma por input
 
 function agregarInvitado(){
@@ -71,3 +86,4 @@ function logIn(e){
         window.location.replace("novios.html")
     }
 }
+

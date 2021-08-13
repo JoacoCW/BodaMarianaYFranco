@@ -1,4 +1,5 @@
 function invitadosUI(parametro){
+    document.getElementById('lista').innerHTML = '';
     for ( const persona of parametro) {
         let tr = document.createElement("tr");
         tr.innerHTML = `<td>${persona.nombre}</td>

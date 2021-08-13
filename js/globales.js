@@ -7,7 +7,3 @@ const usuarios = [
     {username : "Marco", password : "1234"},
     {username : "Joaco", password : "1234"}
 ];
-
-const categorias = ["ANILLO","NADA"];
-
-const fotos = [];

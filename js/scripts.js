@@ -33,7 +33,7 @@ window.addEventListener('load', ()=>{
 
 $('#login').click(logIn);
 
-$('#CheckInvitado').click(checkInvitado);
+$('#checkInvitado').click(checkInvitado);
 
 $('#addInvitado').click(agregarInvitado);
 

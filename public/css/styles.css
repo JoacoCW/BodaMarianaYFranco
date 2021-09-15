@@ -263,7 +263,7 @@ input.invalid {
 
   /* Hide all steps by default: */
 .tab {
-    display: none;
+    display: auto;
 }
 
   /* Make circles that indicate the steps of the form: */

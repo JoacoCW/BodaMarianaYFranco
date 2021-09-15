@@ -14,42 +14,68 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <div class="foto1">
         <div class="letrero1">
-            <a href="../index.html"><img class="img-nombres" src="../assets/img/Nombres-02.svg" alt=""></a>
+            <a href="/"><img class="img-nombres" src="../assets/img/Nombres-02.svg" alt=""></a>
         </div>
     </div>
     <!-- Agregar info invitado -->
-    <form class="text-center mensaje3" id="regForm" action="">
+    <form class="text-center mensaje3" id="regForm" action="/infoInvitado/enviarForm" method= "POST">
 
         <h1 class="form-title">Confirmar datos:</h1>
         
         <!-- One "tab" for each step in the form: -->
-        <div class="tab">Nombre:
-            <p><input placeholder="Nombre..." oninput="this.className = ''"></p>
-            <p><input placeholder="Apellido..." oninput="this.className = ''"></p>
+        <div class="tab">
+            <p><input name= "nombre" placeholder="Nombre..." oninput="this.className = ''"></p>
+            <p><input name= "apellido" placeholder="Apellido..." oninput="this.className = ''"></p>
+            <p><input name= "direccion" placeholder="Dirección..." oninput="this.className = ''"></p>
+            <p><input name= "localidad" placeholder="Localidad..." oninput="this.className = ''"></p>
         </div>
         
-        <div class="tab">Datos:
-            <p><input placeholder="Dirección..." oninput="this.className = ''"></p>
-            <p><input placeholder="Documento..." oninput="this.className = ''"></p>
-        </div>
-        
-        <div class="tab">Selecciones una opción de menú:
+        <div class="tab">
+            <p><input name= "celular"  type="number" placeholder="Número de celular..." oninput="this.className = ''"></p>
+            <p><input name= "documento" type= "number" placeholder="Documento..." oninput="this.className = ''"></p>
+            <p><input name= "edad"  type= "number" placeholder="Edad..." oninput="this.className = ''"></p>
+            
+            <div class="tab">¿Necesita una silla para bebé??:
+                <select name="silla">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <p>Por ordenanza municipal se necesita tener información sobre la situación de vacunación de los invitados contra el COVID-19</p>
+        <div>
+            <label>1 Dosis<input name= "vacuna" type= "radio" value="1" oninput="this.className = ''"></label>
+            <label>2 Dosis<input name= "vacuna" type= "radio" value="2" oninput="this.className = ''"></label>
+            <label>No vacunado/a<input name= "vacuna" type= "radio" value="ninguna" oninput="this.className = ''"></label>
+            
+        </div>        
+       
+        <div class="tab">Seleccione una opción de menú:
             <select name="select">
                 <option value="clasico">Clásico</option>
+                <option value="diabetico">Diabético</option>
+                <option value="intantil">Infantil</option>
                 <option value="celiaco" >Celíaco</option>
                 <option value="vegetariano">Vegetariano</option>
                 <option value="hipertenso">Hipertenso</option>
             </select>
         </div>
+
+        <div class="tab">¿Confirma asistencia a la fiesta?:
+            <select name="confirma">
+                <option value="si">Si</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <button class= "btn" type="submit">Enviar</button>
         
-        <div class="tab">
+        <!-- <div class="tab"> -->
             <!-- Mostrar info -->
-            <h2>Confirmar asistencia</h2>
+            <!-- <h2>Confirmar asistencia</h2>
         </div>
         
         <div style="overflow:auto;">
@@ -57,15 +83,15 @@
             <button class="btn" type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
             <button class="btn" type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
             </div>
-        </div>
+        </div> -->
         
         <!-- Circles which indicates the steps of the form: -->
-        <div style="text-align:center;margin-top:40px;">
+        <!-- <div style="text-align:center;margin-top:40px;">
             <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>
-        </div>
+        </div> -->
         
         </form>
 
@@ -80,7 +106,7 @@
     <script src="../js/globales.js"></script>
     <script src="../js/invitado.js"></script>
     <script src="../js/funciones.js"></script>
-    <script src="../js/scriptInfoInvitados.js"></script>
+    <!-- <script src="../js/scriptInfoInvitados.js"></script> -->
     <!-- Core theme JS-->
     <script src="../js/scripts.js"></script>
 </body>

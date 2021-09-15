@@ -5,18 +5,14 @@ $(document).ready(function () {
     };
 
     //CARGA ASINCRONA DE INFORMACION DE PRODUCTOS DE ORIGEN LOCAL (producto.json)
-    $.get('../data/lista.json',function(datos, estado){
+   $.get('../../data/lista.json', function(datos, estado){
         console.log(datos);
         console.log(estado);
         if(estado == 'success'){
             for (const literal of datos) {
                 invitados.push(new Invitado(literal.nombre, literal.apellido, literal.documento, literal.dire, literal.menu, literal.confirma, literal.id));
             }
-            invitadosUI(invitados);
-            
-        }
-        
-    });
+}});
 
     $('#eliminarInivtado').click(eliminarInvitado);
 

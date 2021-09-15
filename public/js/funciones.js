@@ -1,4 +1,4 @@
-function invitadosUI(parametro){
+/*function invitadosUI(parametro){
     document.getElementById('lista').innerHTML = '';
     for ( const persona of parametro) {
         let tr = document.createElement("tr");
@@ -12,7 +12,7 @@ function invitadosUI(parametro){
                         <td><button id="eliminarInvitado"><i class="fas fa-user-slash"></i></button></td>`;
         document.getElementById('lista').appendChild(tr);
     }
-}
+}*/
 
 // Función que agrega un invitado a la lista con los datos que toma por input
 
@@ -61,7 +61,7 @@ function checkInvitado(){
         alert(invitadoFiltrado.nombre + " " + invitadoFiltrado.apellido + " está invitado a la boda de Mariana y Franco");
         console.log(invitadoFiltrado);
         localStorage.setItem("invitado", JSON.stringify(invitadoFiltrado));
-        window.location.replace("infoInvitado.html")
+        window.location.replace("infoInvitado")
     }
 }
 

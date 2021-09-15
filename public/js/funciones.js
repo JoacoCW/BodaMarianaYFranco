@@ -1,4 +1,4 @@
-/*function invitadosUI(parametro){
+function invitadosUI(parametro){
     document.getElementById('lista').innerHTML = '';
     for ( const persona of parametro) {
         let tr = document.createElement("tr");
@@ -12,7 +12,7 @@
                         <td><button id="eliminarInvitado"><i class="fas fa-user-slash"></i></button></td>`;
         document.getElementById('lista').appendChild(tr);
     }
-}*/
+}
 
 // Función que agrega un invitado a la lista con los datos que toma por input
 

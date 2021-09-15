@@ -71,7 +71,7 @@ function eliminarInvitado(e){
     $(this).closest('tr').remove();
 }
 
-
+/*
 function logIn(e){
     e.preventDefault();
     usuarioIngresado.username = document.getElementById("username").value;
@@ -84,7 +84,7 @@ function logIn(e){
     }
     else {
         console.log("Filtro está vacío por que el usuario existe");
-        window.location.replace("novios.html")
+        // window.location.replace("novios.html")
     }
-}
+}*/
 

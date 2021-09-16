@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
 })
 
 router.get('/loginNovios', function(req, res) {
-    res.sendFile(path.join(__dirname, '../pages/loginNovios.html'))
+    res.sendFile(path.join(__dirname, '../views/loginNovios.html'))
 })
 
 
@@ -27,7 +27,9 @@ router.post('/loginNovios', function(req, res) {
 })
 
 router.get('/novios', function(req, res) {
-    res.sendFile(path.join(__dirname, '../pages/novios.html'))
+    let invitades= fs.readFileSync(path.join(__dirname, '../public/data/lista.json'), "utf-8");
+    let invitadesArray = JSON.parse(invitades);
+    res.render('novios', {listaDeInvitados: invitadesArray})
 })
 
 router.post('/novios', function(req, res) {
@@ -36,16 +38,17 @@ router.post('/novios', function(req, res) {
     invitadesArray.push({
         nombre: req.body.nombre,
         apellido: req.body.apellido
-    }); fs.writeFileSync(path.join(__dirname, '../public/data/lista.json'), JSON.stringify(invitadesArray))
-    res.redirect('/')
+    }); 
+    fs.writeFileSync(path.join(__dirname, '../public/data/lista.json'), JSON.stringify(invitadesArray))
+    res.redirect('/novios')
 }) 
 
 router.get('/invitados', function(req, res) {
-    res.sendFile(path.join(__dirname, '../pages/Invitados.html'))
+    res.sendFile(path.join(__dirname, '../views/Invitados.html'))
 })
 
 router.get('/infoInvitado', function(req, res) {
-    res.sendFile(path.join(__dirname, '../pages/infoInvitado.html'))
+    res.sendFile(path.join(__dirname, '../views/infoInvitado.html'))
 })
 
 router.post('/infoInvitado/enviarForm', function(req, res) {

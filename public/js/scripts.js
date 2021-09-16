@@ -5,7 +5,7 @@ $(document).ready(function () {
     };
 
     //CARGA ASINCRONA DE INFORMACION DE PRODUCTOS DE ORIGEN LOCAL (producto.json)
-   $.get('../../data/lista.json', function(datos, estado){
+   $.get('../data/lista.json', function(datos, estado){
         console.log(datos);
         console.log(estado);
         if(estado == 'success'){

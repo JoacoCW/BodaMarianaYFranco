@@ -19,11 +19,12 @@
     <body>
         <div class="foto1">
             <div class="letrero1">
-                <a href="../index.html"><img class="img-nombres" src="../assets/img/Nombres-02.svg" alt=""></a>
+                <a href="/"><img class="img-nombres" src="../assets/img/Nombres-02.svg" alt=""></a>
             </div>
         </div>
         
         <!-- Agregar invitados-->
+        <form action="/novios" method="POST">
         <section id="agregarInvitadosSection" class= "mensaje3 text-center">
             <h1 class="form-title">Agregar invitados</h1>
             <div>
@@ -33,9 +34,10 @@
                 <input class="inputInvitado" type="text" id="apellido" name="apellido" placeholder="Apellido">
             </div>
             <div>
-                <button class="inputInvitado" id="addInvitado"><i class="fas fa-plus-circle"></i></button>
+                <button type="submit" class="inputInvitado" id="addInvitado"><i class="fas fa-plus-circle"></i></button>
             </div>
         </section>
+    </form>
         <!-- Resultado -->
         <div class="text-center mensaje4" id="resultados"></div>
         <!-- Filtrar confirmados -->

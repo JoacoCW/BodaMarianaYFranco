@@ -30,6 +30,16 @@ router.get('/novios', function(req, res) {
     res.sendFile(path.join(__dirname, '../pages/novios.html'))
 })
 
+router.post('/novios', function(req, res) {
+    let invitades= fs.readFileSync(path.join(__dirname, '../public/data/lista.json'), "utf-8");
+    let invitadesArray = JSON.parse(invitades);
+    invitadesArray.push({
+        nombre: req.body.nombre,
+        apellido: req.body.apellido
+    }); fs.writeFileSync(path.join(__dirname, '../public/data/lista.json'), JSON.stringify(invitadesArray))
+    res.redirect('/')
+}) 
+
 router.get('/invitados', function(req, res) {
     res.sendFile(path.join(__dirname, '../pages/Invitados.html'))
 })

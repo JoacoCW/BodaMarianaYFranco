@@ -1,18 +1,18 @@
-function invitadosUI(parametro){
-    document.getElementById('lista').innerHTML = '';
-    for ( const persona of parametro) {
-        let tr = document.createElement("tr");
-        tr.innerHTML = `<td>${persona.nombre}</td>
-                        <td>${persona.apellido}</td>
-                        <td>${persona.documento}</td>
-                        <td>${persona.dire}</td>
-                        <td>${persona.menu}</td>
-                        <td>${persona.confirma}</td>
-                        <td><button id="btnEditar"><i class="far fa-edit"></i></button></td>
-                        <td><button id="eliminarInvitado"><i class="fas fa-user-slash"></i></button></td>`;
-        document.getElementById('lista').appendChild(tr);
-    }
-}
+// function invitadosUI(parametro){
+//     document.getElementById('lista').innerHTML = '';
+//     for ( const persona of parametro) {
+//         let tr = document.createElement("tr");
+//         tr.innerHTML = `<td>${persona.nombre}</td>
+//                         <td>${persona.apellido}</td>
+//                         <td>${persona.documento}</td>
+//                         <td>${persona.dire}</td>
+//                         <td>${persona.menu}</td>
+//                         <td>${persona.confirma}</td>
+//                         <td><button id="btnEditar"><i class="far fa-edit"></i></button></td>
+//                         <td><button id="eliminarInvitado"><i class="fas fa-user-slash"></i></button></td>`;
+//         document.getElementById('lista').appendChild(tr);
+//     }
+// }
 
 // Función que agrega un invitado a la lista con los datos que toma por input
 
@@ -71,7 +71,7 @@ function eliminarInvitado(e){
     $(this).closest('tr').remove();
 }
 
-/*
+
 function logIn(e){
     e.preventDefault();
     usuarioIngresado.username = document.getElementById("username").value;
@@ -86,5 +86,5 @@ function logIn(e){
         console.log("Filtro está vacío por que el usuario existe");
         // window.location.replace("novios.html")
     }
-}*/
+}
 

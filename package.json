@@ -4,7 +4,8 @@
   "description": "- [Overview](#overview)\r   - [The challenge](#the-challenge)\r   - [Links](#links)\r - [My process](#my-process)\r   - [Built with](#built-with)\r   - [What I learned](#what-i-learned)\r - [Author](#author)",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

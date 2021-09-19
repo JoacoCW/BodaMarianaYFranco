@@ -11,7 +11,7 @@ app.use(express.json());
 app.use('/', userRouter);
 
 
-app.listen(3000, function(){
-    console.log('Server running in 3000 port')
-    console.log('http://localhost:3000')
+app.listen(process.env.PORT || 5000, function(){
+    console.log('Server running in 5000 port')
+    console.log('http://localhost:5000')
 })

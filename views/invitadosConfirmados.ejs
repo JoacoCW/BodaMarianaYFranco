@@ -1,0 +1,52 @@
+    <%- include('./partials/novios') %>
+    <body>
+        <a href="/listaInvitados"><button id="filtroConfirmados" class="confirm btn-confirmados">Lista Completa</button></a>
+             <section class="bg-black">
+                <div class="container px-4 px-lg-5 text-black-50">
+                    <table id="lista">
+                        <tr id="titulosLista">
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Dirección</th>
+                            <th>Localidad</th>
+                            <th>Celular</th>
+                            <th>Documento</th>
+                            <th>Edad</th>
+                            <th>Silla</th>
+                            <th>Vacuna</th>
+                            <th>Menú</th>
+                            <th>confirmación</th>
+                        </tr>
+                        <% for (let invitado of listaDeInvitados) { %>
+                            <%    if (invitado.confirma == "si") { %>
+                        <tr>
+                            <td><%=invitado.nombre%></td>
+                            <td><%=invitado.apellido%></td>
+                            <td><%=invitado.dire%></td>
+                            <td><%=invitado.localidad%></td>
+                            <td><%=invitado.celular%></td>
+                            <td><%=invitado.documento%></td>
+                            <td><%=invitado.edad%></td>
+                            <td><%=invitado.silla%></td>
+                            <td><%=invitado.vacuna%></td>
+                            <td><%=invitado.menu%></td>
+                            <td><%=invitado.confirma%></td>
+                        </tr>
+                        <% } } %> 
+                    </table>
+                </div>
+            </section>
+            <footer class="footerInvitados"><div>Copyright &copy; <a href="https://github.com/JoacoCW">Joaquín Weiss</a> 2021</div></footer>
+            <!-- JQuery -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <!-- Bootstrap core JS-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Mis scripts -->
+            <!-- <script src="../js/globales.js"></script>
+                <script src="../js/invitado.js"></script> -->
+                <!-- <script src="../js/funciones.js"></script> -->
+                <!-- Core theme JS-->
+                <!-- <script src="../js/scripts.js"></script> -->
+            </footer>
+        </section>
+    </body>

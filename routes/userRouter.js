@@ -22,17 +22,17 @@ router.post('/loginNovios', function(req, res) {
     for(let i = 0; i<usuarios.length; i++) {
         if(req.body.username == usuarios[i].username && req.body.password == usuarios[i].password) {
         }
-        res.redirect('/novios')
+        res.redirect('/listaInvitados')
     } 
 })
 
-router.get('/novios', function(req, res) {
+router.get('/listaInvitados', function(req, res) {
     let invitades= fs.readFileSync(path.join(__dirname, '../public/data/lista.json'), "utf-8");
     let invitadesArray = JSON.parse(invitades);
-    res.render('novios', {listaDeInvitados: invitadesArray})
+    res.render('listaInvitados', {listaDeInvitados: invitadesArray})
 })
 
-router.post('/novios', function(req, res) {
+router.post('/listaInvitados', function(req, res) {
     let invitades= fs.readFileSync(path.join(__dirname, '../public/data/lista.json'), "utf-8");
     let invitadesArray = JSON.parse(invitades);
     invitadesArray.push({
@@ -40,8 +40,14 @@ router.post('/novios', function(req, res) {
         apellido: req.body.apellido
     }); 
     fs.writeFileSync(path.join(__dirname, '../public/data/lista.json'), JSON.stringify(invitadesArray))
-    res.redirect('/novios')
+    res.redirect('/listaInvitados')
 }) 
+
+router.get('/invitadosConfirmados', function(req, res) {
+    let invitades= fs.readFileSync(path.join(__dirname, '../public/data/lista.json'), "utf-8");
+    let invitadesArray = JSON.parse(invitades);
+    res.render('invitadosConfirmados', {listaDeInvitados: invitadesArray})
+})
 
 router.get('/invitados', function(req, res) {
     res.sendFile(path.join(__dirname, '../views/Invitados.html'))
